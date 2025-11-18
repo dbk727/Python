@@ -1,15 +1,15 @@
-import random
 class Bank:
-    def __init__(self,name,acctype):
-        self.accno = random.randint(1111111,9999999)
+    def __init__(self, accno, name, acctype, balance):
+        self.accno = accno
         self.name = name
         self.acctype = acctype
-        self.balance = 0
-        self.iscreated=True
+        self.balance = int(balance)
 
     def deposit(self):
         amount = int(input("Enter the amount to deposit: "))
-        if amount<=0;
+        self.balance += amount
+        print("Amount deposited successfully.")
+        print("Your current balance:", self.balance)
 
     def withdraw(self):
         amount = int(input("Enter the amount to withdraw: "))
